@@ -1,4 +1,5 @@
 ﻿using Emlak_Api.Dtos.CategoryDtos;
+using Emlak_Api.Dtos.WhoWeAreDetailDtos;
 
 namespace Emlak_Api.Repositories.CategoryRepository
 {
