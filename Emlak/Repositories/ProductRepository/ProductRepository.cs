@@ -26,7 +26,7 @@ namespace Emlak_Api.Repositories.ProductRepository
 
         public async Task<List<ResultProductWhitCategoryDto>> GetResultProductWhitCategoryAsync()
         {
-            string query = "Select ProductID,Title,Price,City,District,CategoryName From Product inner join Category on Product.ProductCategory=Category.CategoryID";
+            string query = "Select ProductID,Title,Price,City,District,CategoryName,CoverImage,Type,Address From Product inner join Category on Product.ProductCategory=Category.CategoryID";
             using (var connection = _context.CreateConnection())
             {
 
