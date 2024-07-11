@@ -4,6 +4,7 @@ using Emlak_Api.Repositories.CategoryRepository;
 using Emlak_Api.Repositories.PopularLocationRepositories;
 using Emlak_Api.Repositories.ProductRepository;
 using Emlak_Api.Repositories.ServiceRepository;
+using Emlak_Api.Repositories.TestimonialRepositories;
 using Emlak_Api.Repositories.WhoWeAreRepository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,7 @@ builder.Services.AddTransient<IWhoWeAreDetailRepository, WhoWeAreDetailRepositor
 builder.Services.AddTransient<IServiceRepository, ServiceRepository>();
 builder.Services.AddTransient<IBottomGridRepository, BottomGridRepository>();
 builder.Services.AddTransient<IPopularLocationRepository, PopularLocationRepository>();
+builder.Services.AddTransient<ITestimonialRepository, TestimonialRepository>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
