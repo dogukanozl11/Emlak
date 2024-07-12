@@ -1,6 +1,7 @@
 ﻿using Emlak_UI.Dtos.CategoryDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Emlak_UI.Controllers
 {
@@ -26,5 +27,24 @@ namespace Emlak_UI.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public IActionResult CreateCategory()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createCategoryDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMassage = await client.PostAsync("https://localhost:44382/api/Categories", stringContent);
+            if (responseMassage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
     }
 }
