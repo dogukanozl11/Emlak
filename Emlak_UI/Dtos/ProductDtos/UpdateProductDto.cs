@@ -1,6 +1,6 @@
 ﻿namespace Emlak_UI.Dtos.ProductDtos
 {
-    public class ResultProductDtos
+    public class UpdateProductDto
     {
         public int productID { get; set; }
         public string title { get; set; }

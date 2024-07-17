@@ -20,7 +20,7 @@ namespace Emlak_UI.ViewComponents.HomePage
             if (responseMessage.IsSuccessStatusCode)//Http den bize gelen yanıtın başarılı olmasıyla bize bir veri döndürür.
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();//Gelen içeriği String formatında oku.
-                var values = JsonConvert.DeserializeObject<List<ResultProductDtos>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultProductDto>>(jsonData);
                 return View(values);
                 
             }
