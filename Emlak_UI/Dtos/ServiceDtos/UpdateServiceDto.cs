@@ -1,6 +1,6 @@
-﻿namespace Emlak_UI.Dtos.WhoWeAreDtos
+﻿namespace Emlak_UI.Dtos.ServiceDtos
 {
-    public class ResultServiceDto
+    public class UpdateServiceDto
     {
         public int ServiceID { get; set; }
         public string ServiceName { get; set; }

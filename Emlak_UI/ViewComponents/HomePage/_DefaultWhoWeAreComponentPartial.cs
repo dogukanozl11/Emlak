@@ -1,4 +1,5 @@
-﻿using Emlak_UI.Dtos.WhoWeAreDtos;
+﻿using Emlak_UI.Dtos.ServiceDtos;
+using Emlak_UI.Dtos.WhoWeAreDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 

@@ -1,4 +1,5 @@
-﻿using Emlak_Api.Repositories.ServiceRepository;
+﻿using Emlak_Api.Dtos.ServiceDtos;
+using Emlak_Api.Repositories.ServiceRepository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +10,6 @@ namespace Emlak_Api.Controllers
     public class ServicesController : ControllerBase
     {
         private readonly IServiceRepository _serviceRepository;
-
         public ServicesController(IServiceRepository serviceRepository)
         {
             _serviceRepository = serviceRepository;
@@ -17,7 +17,31 @@ namespace Emlak_Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetServiceList()
         {
-            var value=await _serviceRepository.GetAllServiceAsync();
+            var value = await _serviceRepository.GetAllService();
+            return Ok(value);
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateService(CreateServiceDto createServiceDto)
+        {
+            await _serviceRepository.CreateService(createServiceDto);
+            return Ok("Hizmet Kısmı Başarılı Bir Şekilde Eklendi");
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteService(int id)
+        {
+            await _serviceRepository.DeleteService(id);
+            return Ok("Hizmet Kısmı Başarılı Bir Şekilde Silindi");
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdateService(UptadeServiceDto updateServiceDto)
+        {
+            await _serviceRepository.UpdateService(updateServiceDto);
+            return Ok("Hizmet Kısmı Başarıyla Güncellendi");
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetService(int id)
+        {
+            var value = await _serviceRepository.GetService(id);
             return Ok(value);
         }
     }

@@ -49,7 +49,7 @@ namespace Emlak_Api.Repositories.StatisticRepositories
 
         public decimal AverageProductPriceByRent()
         {
-            string query = "Select Avg(Price) From Product where Type='Kiralık'";
+            string query = "Select Avg(Price) From Product where Type='Kiralik'";
             using (var connection = _context.CreateConnection())
             {
                 var values = connection.QueryFirstOrDefault<decimal>(query);
@@ -59,7 +59,7 @@ namespace Emlak_Api.Repositories.StatisticRepositories
 
         public decimal AverageProductPriceBySale()
         {
-            string query = "Select Avg(Price) From Product where Type='Satılık'";
+            string query = "Select Avg(Price) From Product where Type='Satilik'";
             using (var connection = _context.CreateConnection())
             {
                 var values = connection.QueryFirstOrDefault<decimal>(query);
