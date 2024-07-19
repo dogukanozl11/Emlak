@@ -36,3 +36,4 @@ namespace Emlak_Api.Repositories.ProductRepository
         }
     }
 }
+

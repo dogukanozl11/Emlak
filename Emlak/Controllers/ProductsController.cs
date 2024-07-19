@@ -26,5 +26,6 @@ namespace Emlak_Api.Controllers
             var values = await _productRepository.GetResultProductWhitCategoryAsync();
             return Ok(values);
         }
+        
     }
 }
