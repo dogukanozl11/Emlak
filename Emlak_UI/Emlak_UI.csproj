@@ -14,6 +14,10 @@
     <None Include="Views\PopularLocation\CreatePopularLocation.cshtml" />
     <None Include="Views\PopularLocation\Index.cshtml" />
     <None Include="Views\PopularLocation\UpdatePopularLocation.cshtml" />
+    <None Include="Views\Shared\Components\_DasboardToDoListComponentPartial\Default.cshtml" />
+    <None Include="Views\Shared\Components\_DashboardLast4ContactListComponentPartial\Default.cshtml" />
+    <None Include="Views\Shared\Components\_DashboardLast5ProductComponentPartial\Default.cshtml" />
+    <None Include="Views\Shared\Components\_DashboardStatisticsComponentPartial\Default.cshtml" />
     <None Include="wwwroot\starter\listing.html" />
   </ItemGroup>
 
