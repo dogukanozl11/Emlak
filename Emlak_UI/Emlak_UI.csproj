@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\EstateAgent\Views\Shared\Components\_NavbarLast3MessageComponentPartial\Default.cshtml" />
     <None Include="Views\PopularLocation\CreatePopularLocation.cshtml" />
     <None Include="Views\PopularLocation\Index.cshtml" />
     <None Include="Views\PopularLocation\UpdatePopularLocation.cshtml" />
@@ -18,16 +19,25 @@
     <None Include="Views\Shared\Components\_DashboardLast4ContactListComponentPartial\Default.cshtml" />
     <None Include="Views\Shared\Components\_DashboardLast5ProductComponentPartial\Default.cshtml" />
     <None Include="Views\Shared\Components\_DashboardStatisticsComponentPartial\Default.cshtml" />
+    <None Include="Views\Shared\Components\_EstateAgentDashboardChartComponentPartial\Default.cshtml" />
+    <None Include="Views\Shared\Components\_EstateAgentLast5ProductComponentPartial\Default.cshtml" />
+    <None Include="Views\Shared\Components\_EstateAgentNavbarComponentPartial\Default.cshtml" />
     <None Include="wwwroot\starter\listing.html" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.35.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\EstateAgent\Data\" />
     <Folder Include="Areas\EstateAgent\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Emlak\Emlak_Api.csproj" />
   </ItemGroup>
 
 </Project>

@@ -46,7 +46,24 @@ namespace Emlak_Api.Controllers
             var values = await _productRepository.GetLast5ProductAsync();
             return Ok(values);
         }
+
+        [HttpGet("ProductAdvertsListByEmployeeByTrue")]
+
+        public async Task<IActionResult> ProductAdvertsListByEmployeeByTrue(int id)
+        {
+            var values=await _productRepository.GetProductAdvertListByEmployeeAsyncByTrue(id);
+            return Ok(values);
+        }
+        [HttpGet("ProductAdvertListByEmployeeByFalse")]
+
+        public async Task<IActionResult> ProductAdvertListByEmployeeByFalse(int id)
+        {
+            var values = await _productRepository.GetProductAdvertListByEmployeeAsyncByFalse(id);
+            return Ok(values);
+        }
+
         [HttpPost]
+
         public async Task<IActionResult> CreateProduct(CreateProductDto createProductDto)
         {
             await _productRepository.CreateProduct(createProductDto);
